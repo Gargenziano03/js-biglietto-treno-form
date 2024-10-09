@@ -27,7 +27,6 @@ const etaEl = document.getElementById('eta');
 
 //FASE 2: elaborazione dati
 //richiamo funzione
-
 buttonEl.addEventListener('click', function(){
     //Calcolo del prezzo 
     let prezzoBase = km * 0.21;
@@ -35,13 +34,12 @@ buttonEl.addEventListener('click', function(){
 
     //se è possibile aggiunta di sconti
     if (eta < 18) {
-        prezzoFinale *= 0.8;
+        prezzoFinale  = (prezzoBase * 0.20) / 100;
     }else if(eta > 65){
-        prezzoFinale *= 0.6;
+        prezzoFinale = (prezzoBase * 0.40) / 100;;
     }else{
         prezzoFinale
-    }
-    console.log(`${prezzoFinale} è il prezzo del biglietto`);
-    
-});
+    }  
+    console.log(`€ ${prezzoFinale} è il prezzo del biglietto`);
 
+});
