@@ -24,3 +24,24 @@ per indicare i centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 const buttonEl = document.getElementById('calcola');
 const kmEl = document.getElementById('km');
 const etaEl = document.getElementById('eta');
+
+//FASE 2: elaborazione dati
+//richiamo funzione
+
+buttonEl.addEventListener('click', function(){
+    //Calcolo del prezzo 
+    let prezzoBase = km * 0.21;
+    let prezzoFinale = prezzoBase
+
+    //se è possibile aggiunta di sconti
+    if (eta < 18) {
+        prezzoFinale *= 0.8;
+    }else if(eta > 65){
+        prezzoFinale *= 0.6;
+    }else{
+        prezzoFinale
+    }
+    console.log(`${prezzoFinale} è il prezzo del biglietto`);
+    
+});
+
