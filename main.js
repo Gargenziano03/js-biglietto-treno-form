@@ -19,3 +19,8 @@ i dati e visualizzare il calcolo finale con il prezzo. Il recap dei dati e l'out
 andranno quindi stampati in pagina (il prezzo dovrà essere formattato con massimo due decimali, 
 per indicare i centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 */
+
+// FASE 1: seleziona un elemento del Dom cercandolo per ID
+const buttonEl = document.getElementById('calcola');
+const kmEl = document.getElementById('km');
+const etaEl = document.getElementById('eta');
